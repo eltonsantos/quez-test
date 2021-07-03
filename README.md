@@ -33,7 +33,7 @@ This project was developed using the following technologies:
 Clone the project and access the folder
 
 ```bash
-$ git clone https://gitlab.com/eltonsantos/quez-test.git && cd quez-test
+$ git clone https://github.com/eltonsantos/quez-test.git && cd quez-test
 ```
 
 Follow the steps below
@@ -41,8 +41,11 @@ Follow the steps below
 # Install the dependencies
 $ bundle
 
+# Create datebase
+$ rake db:create
+
 # Run migrations
-$ rails db:migrate
+$ rake db:migrate
 
 # Run default values
 $ rake db:seed
@@ -50,16 +53,17 @@ $ rake db:seed
 # Start the project
 $ rails s
 ```
-The api will be running on port 3000 and the app in another port.
-Use: email: admin@admin.com, password: password for user Admin
-Use: email: manager@manager.com, password: password for user Manager
-Use: email: agent@agent.com, password: password for user Agent
+The api will be running on port 3000 and the app in another port. To access the system, check the **db/seed.rb** file to see all credentials, or can use: **admin@admin.com/password** to admin access, **manager@manager.com/password** to manager access and **agent1@agent1.com/password** to agent access.
 
 ## 💻 Project
 
 This project was developed for testing in the company QuezMedia, in the June 27, 2021. For the first version, unfortunately many features are not available yet. 🥺 But I'm satisfied with the result, because since 2016 I was out of contact with Ruby on Rails. And basically read some of the documentation on Friday and Saturday night. And in a short time I was able to understand about authorization and authentication using devise and cancancan. I really went as far as I could go with the time I had.
 
 ## 🔖 Layout
+
+<p align="center">
+  <img alt="TEST USING RUBY ON RAILS" src=".github/quez.png" width="500px">
+</p>
 
 The layout was created from scratch using the **TailWindCSS** framework.
 
