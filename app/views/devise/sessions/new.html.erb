@@ -1,0 +1,35 @@
+<h2 class="font-bold text-center text-4xl text-yellow-500"> Log in</h2>
+
+<div class="flex flex-col justify-center sm:w-96 sm:m-auto mx-5 mb-5 space-y-8">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "bg-gray shadow-lg rounded px-4 pt-6 pb-8 my-4"}) do |f| %>
+    <div class="field">
+      <%= f.label :email, class: "block text-gray-700 text-sm font-normal mb-2" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+    </div>
+
+    <div class="field mt-4">
+      <%= f.label :password, class: "block text-gray-700 text-sm font-normal mb-2" %>
+      <%= f.password_field :password, autocomplete: "current-password", class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="inline-block align-middle mt-4">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+
+    <div class="flex flex-col-reverse sm:flex-row sm:justify-between items-center mt-4">
+
+      <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+        <%= link_to "Forgot your password?", new_password_path(resource_name), class: "inline-block text-blue-500 hover:text-blue-800 hover:underline" %>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit "Log in", class: "bg-blue-500 text-white font-bold px-5 py-2 rounded focus:outline-none shadow hover:bg-blue-700 transition-colors cursor-pointer" %>
+      </div>
+    </div>
+
+  <% end %>
+
+</div>
