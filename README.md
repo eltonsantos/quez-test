@@ -62,7 +62,7 @@ This project was developed for testing in the company QuezMedia, in the June 27,
 ## 🔖 Layout
 
 <p align="center">
-  <img alt="TEST USING RUBY ON RAILS" src=".github/quez.png" width="500px">
+  <img alt="TEST USING RUBY ON RAILS" src=".github/quez.png" width="700px">
 </p>
 
 The layout was created from scratch using the **TailWindCSS** framework.
